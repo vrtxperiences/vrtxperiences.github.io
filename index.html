@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VRTX Experiences | Experiencias sin límites</title>
-<meta name="description" content="VRTX Experiences: experiencias de aventura, viajes extremos y paracaidismo. Vive experiencias sin límites.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -12,7 +11,7 @@
 body{
   font-family:Arial, Helvetica, sans-serif;
   background:#000;
-  color:#fff;
+  color:white;
 }
 
 .hero{
@@ -22,15 +21,16 @@ body{
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:30px;
-  background:radial-gradient(circle at center,#06202d 0%,#000 65%);
+  padding:25px;
+  background:radial-gradient(circle,#062333 0%,#000 70%);
 }
 
 .logo{
-  max-width:520px;
-  width:88%;
+  width:95%;
+  max-width:850px;
+  object-fit:contain;
   animation:aparecer 1.8s ease, flotar 4s ease-in-out infinite;
-  filter:drop-shadow(0 0 25px rgba(0,212,255,.8));
+  filter:drop-shadow(0 0 35px rgba(0,212,255,.8));
 }
 
 @keyframes aparecer{
@@ -46,13 +46,13 @@ body{
 .slogan{
   margin-top:25px;
   font-size:22px;
-  letter-spacing:4px;
+  letter-spacing:6px;
   color:#00d4ff;
 }
 
 .scroll{
   margin-top:70px;
-  font-size:36px;
+  font-size:42px;
   animation:bajar 1.5s infinite;
 }
 
@@ -67,9 +67,9 @@ body{
 }
 
 .seccion h2{
-  font-size:36px;
+  font-size:34px;
   letter-spacing:4px;
-  margin-bottom:30px;
+  margin-bottom:35px;
 }
 
 .azul{color:#00d4ff}
@@ -92,7 +92,7 @@ body{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
   gap:25px;
-  max-width:900px;
+  max-width:950px;
   margin:40px auto 0;
 }
 
@@ -101,30 +101,42 @@ body{
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:14px;
-  padding:25px;
-  border:1px solid #00d4ff;
-  border-radius:18px;
+  gap:15px;
+  padding:28px;
+  border:2px solid #00d4ff;
+  border-radius:22px;
   text-decoration:none;
   color:white;
-  background:rgba(255,255,255,.05);
+  background:rgba(255,255,255,.06);
   transition:.3s;
+  min-height:170px;
 }
 
 .boton:hover{
   transform:translateY(-8px);
-  box-shadow:0 0 25px rgba(0,212,255,.5);
+  box-shadow:0 0 30px rgba(0,212,255,.6);
 }
 
-.boton img{
-  width:55px;
-  height:55px;
-  filter:invert(1);
+.icono{
+  width:60px;
+  height:60px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  font-weight:bold;
 }
+
+.facebook{background:#1877F2}
+.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4)}
+.tiktok{background:#000;border:2px solid #25F4EE;color:#fff}
+.whatsapp{background:#25D366}
 
 .boton span{
   font-weight:bold;
-  letter-spacing:2px;
+  letter-spacing:3px;
+  font-size:18px;
 }
 
 footer{
@@ -140,9 +152,27 @@ footer a{
 }
 
 @media(max-width:600px){
-  .video iframe{height:250px}
-  .seccion h2{font-size:26px}
-  .slogan{font-size:15px}
+  .logo{
+    width:100%;
+    max-width:600px;
+  }
+
+  .slogan{
+    font-size:16px;
+    letter-spacing:5px;
+  }
+
+  .video iframe{
+    height:250px;
+  }
+
+  .seccion h2{
+    font-size:26px;
+  }
+
+  .redes{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
@@ -150,7 +180,7 @@ footer a{
 <body>
 
 <section class="hero">
-  <img class="logo" src="logo.PNG" alt="VRTX Experiences">
+  <img class="logo" src="./logo.PNG" alt="VRTX Experiences">
   <p class="slogan">EXPERIENCIAS SIN LÍMITES</p>
   <div class="scroll">⌄</div>
 </section>
@@ -171,25 +201,27 @@ footer a{
   <h2>SÍGUENOS EN <span class="azul">NUESTRAS REDES</span></h2>
 
   <div class="redes">
+
     <a class="boton" href="https://facebook.com/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+      <div class="icono facebook">f</div>
       <span>FACEBOOK</span>
     </a>
 
     <a class="boton" href="https://instagram.com/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      <div class="icono instagram">◎</div>
       <span>INSTAGRAM</span>
     </a>
 
     <a class="boton" href="https://tiktok.com/" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+      <div class="icono tiktok">♪</div>
       <span>TIKTOK</span>
     </a>
 
     <a class="boton" href="https://wa.me/525586892207" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+      <div class="icono whatsapp">☎</div>
       <span>WHATSAPP</span>
     </a>
+
   </div>
 </section>
 
